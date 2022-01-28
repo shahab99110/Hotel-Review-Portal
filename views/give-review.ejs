@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Give Review</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="flex justify-between">
+          <h1
+            class="text-5xl p-3 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+          >
+          <a href="/">HOTEL REVIEWER</a>
+          </h1>
+        <nav class="flex felx-row self-center mr-4">
+            <a href="/give-review" class="m-3 px-3 py-1 border text-lg rounded-xl hover:bg-black bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 ">Give Review</a>
+            <a href="/hotel-list" class="m-3 px-3 py-1 border text-lg rounded-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">See Hotels</a>
+        </nav>
+          </nav>
+        </div>
+      </header>
+      <main>
+          <div class=" container mx-auto w-1/2 text-center">
+          <form action="/hotel-review-data-form" method="POST">
+            <label for="userName">Your Name</label>
+            <input type="text" name="userName" id="" class="border">
+            <label for="userEmail">Your email</label>
+            <input type="text" name="userEmail" id="" class="border">
+              <label for="hotelName">Hotel Name</label>
+              <input type="text" name="hotelName" id="" class="border">
+              <label for="hotelLocation">Hotel Location</label>
+              <input type="text" name="hotelLocation" id="" class="border">
+              <label for="hotelStyle">Hotel Style</label>
+              <input type="text" name="hotelStyle" id="" class="border">
+              <label for="hotelRating">Rating</label>
+              <input type="text" name="hotelRating" id="" class="border">
+              <button type="submit" class="border">Submit</button>
+          </form>
+            </div>
+      </main>
+</body>
+</html>

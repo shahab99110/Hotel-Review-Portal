@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Hotel List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="flex justify-between">
+          <h1
+            class="text-5xl p-3 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+          >
+          <a href="/">HOTEL REVIEWER</a>
+          </h1>
+        <nav class="flex felx-row self-center mr-4">
+            <a href="/give-review" class="m-3 px-3 py-1 border text-lg rounded-xl hover:bg-black bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 ">Give Review</a>
+            <a href="/hotel-list" class="m-3 px-3 py-1 border text-lg rounded-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">See Hotels</a>
+        </nav>
+          </nav>
+        </div>
+      </header>
+      <main>
+          <h1 class="text-3xl text-center font-extrabold mt-10">
+              The List Of Best Hotel
+          </h1>
+           <section class="flex flex-col items-center m-4">
+            <h2>There are total <%= numberOfHotel %> number of hotel</h2>
+            <% for (let user of HotelList) { %>
+              <div class="container border rounded-md h-60 w-3/4 p-2 bg-indigo-500 block">
+                <h2 class="text-center text-2xl"><%= user.hotelName %></h2>
+                <ul class="mt-2 ml-2">
+                    <li class="p-4"><%= user.hotelLocation %></li>
+                    <li class="p-4"><%= user.hotelStyle %></li>
+                    <li class="p-4"><%= user.hotelRating %></li>
+                </ul>
+              </div>
+              <% } %>
+              
+              
+          </section>
+      </main>
+</body>
+</html>
